@@ -12,6 +12,7 @@ import BarChart from "../../components/BarChart";
 import WorldMapChart from "../../components/WorldMapChart";
 import ProgressCircle from "../../components/ProgressCircle";
 import StatBox from "../../components/StatBox";
+import Panel from "../../components/Panel";
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -46,7 +47,7 @@ const Dashboard = () => {
         gap="20px"
       >
         {/* ROW 1 */}
-        <Box
+        {/* <Box
           gridColumn="span 3"
           backgroundColor={colors.primary[400]}
           display="flex"
@@ -61,14 +62,21 @@ const Dashboard = () => {
               <EmailIcon sx={{ color: colors.greenAccent[600], fontSize: "26px" }} />
             }
           />
-        </Box>
+        </Box> */}
 
-        <Box
-          gridColumn="span 3"
-          backgroundColor={colors.primary[400]}
-          display="flex"
-          alignItems="center"
-          justifyContent="center">
+        <Panel colspan="3">
+          <StatBox
+            title="14,672"
+            subtitle="Email sent"
+            progress="0.75"
+            increase="+14%"
+            icon={
+              <EmailIcon sx={{ color: colors.greenAccent[600], fontSize: "26px" }} />
+            }
+          />
+        </Panel>
+
+        <Panel colspan="3">
           <StatBox
             title="4,801"
             subtitle="Sales"
@@ -78,14 +86,9 @@ const Dashboard = () => {
               <PointOfSaleIcon sx={{ color: colors.greenAccent[600], fontSize: "26px" }} />
             }
           />
-        </Box>
+        </Panel>
 
-        <Box
-          gridColumn="span 3"
-          backgroundColor={colors.primary[400]}
-          display="flex"
-          alignItems="center"
-          justifyContent="center">
+        <Panel colspan="3">
           <StatBox
             title="780"
             subtitle="New Clients"
@@ -95,14 +98,9 @@ const Dashboard = () => {
               <PersonAddIcon sx={{ color: colors.greenAccent[600], fontSize: "26px" }} />
             }
           />
-        </Box>
+        </Panel>
 
-        <Box
-          gridColumn="span 3"
-          backgroundColor={colors.primary[400]}
-          display="flex"
-          alignItems="center"
-          justifyContent="center">
+        <Panel colspan="3">
           <StatBox
             title="331,900"
             subtitle="Trafic inbound"
@@ -112,7 +110,7 @@ const Dashboard = () => {
               <TrafficIcon sx={{ color: colors.greenAccent[600], fontSize: "26px" }} />
             }
           />
-        </Box>
+        </Panel>
 
 
 
@@ -206,7 +204,7 @@ const Dashboard = () => {
           <Typography variant="h5" fontWeight="600">Campaign</Typography>
           <Box display="flex" flexDirection="column" alignItems="center" mt="25px">
             <ProgressCircle size="125" />
-            <Typography variant="h5" color={colors.greenAccent[500]} sx={{mt: "15px"}}>
+            <Typography variant="h5" color={colors.greenAccent[500]} sx={{ mt: "15px" }}>
               28,780
             </Typography>
             <Typography>
@@ -220,7 +218,7 @@ const Dashboard = () => {
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
         >
-          <Typography variant="h5" fontWeight="600" sx={{p: "30px 30px 0 30px"}}>Sales Quantity</Typography>
+          <Typography variant="h5" fontWeight="600" sx={{ p: "30px 30px 0 30px" }}>Sales Quantity</Typography>
           <Box height="250px" mt="-20px">
             <BarChart isDashboard={true} />
           </Box>
@@ -232,7 +230,7 @@ const Dashboard = () => {
           backgroundColor={colors.primary[400]}
           p="30px"
         >
-          <Typography variant="h5" fontWeight="600" sx={{mb: "15px"}}>Geography Based Traffic</Typography>
+          <Typography variant="h5" fontWeight="600" sx={{ mb: "15px" }}>Geography Based Traffic</Typography>
           <Box height="200px">
             <WorldMapChart isDashboard={true} />
           </Box>
