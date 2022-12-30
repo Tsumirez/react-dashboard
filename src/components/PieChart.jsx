@@ -36,7 +36,7 @@ const PieChart = () => {
                 legends: {
                     text: {
                         fill: colors.gray[100],
-                    },
+                    }
                 },
             }}
             margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
@@ -96,6 +96,8 @@ const PieChart = () => {
                     itemOpacity: 1,
                     symbolSize: 18,
                     symbolShape: "circle",
+                    symbolBorderColor: colors.gray[200],
+                    symbolBorderWidth: 1.5,
                     effects: [
                         {
                             on: "hover",
