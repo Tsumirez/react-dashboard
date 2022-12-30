@@ -8,6 +8,7 @@ const BarChart = ({ isDashboard = false }) => {
     const colors = tokens(theme.palette.mode);
 
     return (
+        <div class="bar-chart">
         <ResponsiveBar
             data={data}
             theme={{
@@ -45,7 +46,9 @@ const BarChart = ({ isDashboard = false }) => {
             padding={0.3}
             valueScale={{ type: "linear" }}
             indexScale={{ type: "band", round: true }}
-            colors={{ scheme: "nivo" }}
+            colors={{ scheme: "pink_yellowGreen" }}
+            borderWidth="1"
+            borderColor = {colors.primary[100]}
             defs={[
                 {
                     id: "dots",
@@ -66,10 +69,10 @@ const BarChart = ({ isDashboard = false }) => {
                     spacing: 10,
                 },
             ]}
-            borderColor={{
-                from: "color",
-                modifiers: [["darker", "1.6"]],
-            }}
+            // borderColor={{
+            //     from: "color",
+            //     modifiers: [["darker", "1.6"]],
+            // }}
             axisTop={null}
             axisRight={null}
             axisBottom={{
@@ -124,6 +127,7 @@ const BarChart = ({ isDashboard = false }) => {
                 return e.id + ": " + e.formattedValue + " in country: " + e.indexValue;
             }}
         />
+        </div>
     );
 };
 

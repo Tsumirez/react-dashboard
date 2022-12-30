@@ -10,6 +10,7 @@ const PieChart = () => {
     return (
         <ResponsivePie
             data={data}
+            colors = {{scheme: "purpleRed_green"}}
             theme={{
                 axis: {
                     domain: {
@@ -43,10 +44,12 @@ const PieChart = () => {
             padAngle={0.7}
             cornerRadius={3}
             activeOuterRadiusOffset={8}
-            borderColor={{
-                from: "color",
-                modifiers: [["darker", 0.2]],
-            }}
+            // borderColor={{
+            //     from: "color",
+            //     modifiers: [["darker", 0.2]],
+            // }}
+            borderColor={colors.primary[100]}
+            borderWidth="1.5"
             arcLinkLabelsSkipAngle={10}
             arcLinkLabelsTextColor={colors.gray[100]}
             arcLinkLabelsThickness={2}

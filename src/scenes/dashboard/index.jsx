@@ -40,12 +40,7 @@ const Dashboard = () => {
       </Box>
       {/* GRID & CHARTS */}
 
-      <Box
-        display="grid"
-        gridTemplateColumns="repeat(12, 1fr)"
-        gridAutoRows="140px"
-        gap="20px"
-      >
+      <Box id="dashboard-panels">
         {/* ROW 1 */}
         {/* <Box
           gridColumn="span 3"
@@ -64,7 +59,7 @@ const Dashboard = () => {
           />
         </Box> */}
 
-        <Panel colspan="3">
+        <Panel class="small-panel">
           <StatBox
             title="14,672"
             subtitle="Email sent"
@@ -76,7 +71,7 @@ const Dashboard = () => {
           />
         </Panel>
 
-        <Panel colspan="3">
+        <Panel colspan="3" class="small-panel">
           <StatBox
             title="4,801"
             subtitle="Sales"
@@ -88,7 +83,7 @@ const Dashboard = () => {
           />
         </Panel>
 
-        <Panel colspan="3">
+        <Panel colspan="3"  class="small-panel">
           <StatBox
             title="780"
             subtitle="New Clients"
@@ -100,7 +95,7 @@ const Dashboard = () => {
           />
         </Panel>
 
-        <Panel colspan="3">
+        <Panel colspan="3"  class="small-panel">
           <StatBox
             title="331,900"
             subtitle="Trafic inbound"
@@ -116,8 +111,8 @@ const Dashboard = () => {
 
         {/* ROW 2 */}
 
-        <Box
-          gridColumn="span 8" gridRow="span 2" backgroundColor={colors.primary[400]}
+        <Box class="big-panel"
+           backgroundColor={colors.primary[400]}
         >
           <Box
             mt="25px"

@@ -18,18 +18,18 @@ justifyContent="center">
 />
 </Box> */}
 
-const Panel = ({ colspan, rowspan=1, children }) => {
+const Panel = ({ rowspan=1, children }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
 
     return (
-        <Box
-            gridColumn={`span ${colspan}`}
-            gridRow={`span ${rowspan}`}
-            backgroundColor={colors.primary[400]}
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
+        <Box className="small-panel"
+            // gridColumn={`span ${colspan}`}
+            // gridRow={`span ${rowspan}`}
+             backgroundColor={colors.primary[400]}
+            // display="flex"
+            // alignItems="center"
+            // justifyContent="center"
         >{children}</Box>
     )
 }
