@@ -39,16 +39,26 @@ const BarChart = ({ isDashboard = false }) => {
                         fill: colors.gray[100],
                     },
                 },
+                grid: {
+                    line: {
+                        stroke: colors.gray[600]
+                    }
+                },
+                tooltip: {
+                    container : {
+                        color: "#a37"
+                    }
+                }
             }}
             keys={["hot dog", "burger", "sandwich", "kebab", "fries", "donut"]}
             indexBy="country"
-            margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
+            margin={{ top: 50, right: 130, bottom: 50, left: 50 }}
             padding={0.3}
             valueScale={{ type: "linear" }}
             indexScale={{ type: "band", round: true }}
             colors={{ scheme: "pink_yellowGreen" }}
             borderWidth="1"
-            borderColor = {colors.primary[100]}
+            borderColor = "#333"
             defs={[
                 {
                     id: "dots",
@@ -73,6 +83,7 @@ const BarChart = ({ isDashboard = false }) => {
             //     from: "color",
             //     modifiers: [["darker", "1.6"]],
             // }}
+            groupMode = "stacked"
             axisTop={null}
             axisRight={null}
             axisBottom={{
@@ -91,7 +102,7 @@ const BarChart = ({ isDashboard = false }) => {
                 legendPosition: "middle",
                 legendOffset: -40,
             }}
-            enableLabel={false}
+            enableLabel={true}
             labelSkipWidth={12}
             labelSkipHeight={12}
             labelTextColor={{
@@ -112,6 +123,9 @@ const BarChart = ({ isDashboard = false }) => {
                     itemDirection: "left-to-right",
                     itemOpacity: 0.85,
                     symbolSize: 20,
+                    symbolBorderWidth: 1,
+                    symbolBorderColor: colors.gray[100],
+
                     effects: [
                         {
                             on: "hover",
