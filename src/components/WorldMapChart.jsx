@@ -31,13 +31,18 @@ const WorldMapChart = ({ isDashboard = false }) => {
                         text: {
                             fill: colors.gray[100],
                         },
-                    },
+                    }
                 },
                 legends: {
                     text: {
                         fill: colors.gray[100],
                     },
                 },
+                tooltip: {
+                    container : {
+                        color: "#207"
+                    }
+                }
             }}
             features={geoFeatures.features}
             margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
@@ -48,8 +53,8 @@ const WorldMapChart = ({ isDashboard = false }) => {
             projectionScale={isDashboard ? 40 : 150}
             projectionTranslation={isDashboard ? [0.49, 0.6] : [0.5, 0.5]}
             projectionRotation={[0, 0, 0]}
-            borderWidth={1.5}
-            borderColor="#ffffff"
+            borderWidth={1}
+            borderColor="#000"
             legends={
                 !isDashboard
                     ? [
