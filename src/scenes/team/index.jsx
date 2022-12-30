@@ -45,11 +45,11 @@ const Team = () => {
 
     ];
     return (
-        <Box m="20px">
+        <>
             <Header title="TEAM" subtitle="Managing the team members" />
 
             <Box
-                m="40px 0 0 0"
+                m="2.5rem 0 0 0"
                 height="70vh"
                 sx = {{
                     "& .MuiDataGrid-root" : {
@@ -62,15 +62,16 @@ const Team = () => {
                         color: colors.greenAccent[300]
                     },
                     "& .MuiDataGrid-columnHeaders" : {
-                        backgroundColor: colors.blueAccent[700],
+                        backgroundColor: colors.greenAccent[600],
                         borderBottom: "none"
                     },
                     "& .MuiDataGrid-virtualScroller" : {
-                        backgroundColor: colors.primary[600]
+                        backgroundColor: colors.primary[400],
+                        fontSize: '1rem'
                     },
                     "& .MuiDataGrid-footerContainer" : {
                         borderTop: "none",
-                        backgroundColor: colors.blueAccent[700]
+                        backgroundColor: colors.greenAccent[400]
                     }
                 }}
             >
@@ -79,7 +80,7 @@ const Team = () => {
                     columns={columns}
                 />
             </Box>
-        </Box>
+        </>
     )
 }
 

@@ -23,12 +23,13 @@ const Contacts = () => {
     ];
 
     return (
-        <Box m="20px">
+        <>
             <Header title="CONTACTS" subtitle="List of Contacts for future reference" />
 
             <Box
                 m="40px 0 0 0"
                 height="70vh"
+
                 sx = {{
                     "& .MuiDataGrid-root" : {
                         border: "none"
@@ -41,10 +42,10 @@ const Contacts = () => {
                     },
                     "& .MuiDataGrid-columnHeaders" : {
                         backgroundColor: colors.blueAccent[700],
-                        borderBottom: "none"
+                        borderBottom: "none",
                     },
                     "& .MuiDataGrid-virtualScroller" : {
-                        backgroundColor: colors.primary[600]
+                        backgroundColor: colors.primary[400],
                     },
                     "& .MuiDataGrid-footerContainer" : {
                         borderTop: "none",
@@ -61,7 +62,7 @@ const Contacts = () => {
                     components = {{ Toolbar : GridToolbar }}
                 />
             </Box>
-        </Box>
+        </>
     )
 }
 
