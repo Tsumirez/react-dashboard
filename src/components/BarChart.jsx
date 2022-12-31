@@ -78,10 +78,7 @@ const BarChart = ({ isDashboard = false }) => {
                     spacing: 10,
                 },
             ]}
-            // borderColor={{
-            //     from: "color",
-            //     modifiers: [["darker", "1.6"]],
-            // }}
+
             groupMode = "stacked"
             axisTop={null}
             axisRight={null}

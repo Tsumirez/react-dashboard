@@ -13,7 +13,7 @@ const PieChart = () => {
                 data={data}
                 // ['#002d6e','#40a','#71b', '#a29', '#c07']
                 //['#390','#fd3','#333', '#46a', '#c05']
-                colors={['#390', '#fd3', '#333', '#46a', '#c05']}
+                colors={['#390', '#fd3', '#333', '#46a', '#c05', 'rgba(60,10,90,0.7)']}
                 theme={{
                     axis: {
                         domain: {
@@ -102,7 +102,7 @@ const PieChart = () => {
                         justify: false,
                         translateX: 0,
                         translateY: 80,
-                        itemsSpacing: 0,
+                        itemsSpacing: 50,
                         itemWidth: 100,
                         itemHeight: 18,
                         itemTextColor: colors.gray[100],
