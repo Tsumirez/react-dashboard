@@ -319,81 +319,44 @@ export const mockTransactions = [
 
 export const mockBarData = [
   {
-    country: "AD",
-    "hot dog": 137,
-
-    burger: 96,
-
-    kebab: 72,
-
-    donut: 140,
-
+    quarter: "4/2021",
+    Playstation: 63.7,
+    Xbox: 59.8,
+    Nitendo: 11.2,
+    PC: 90.8,
+    Accessories: 31.3
   },
   {
-    country: "AE",
-    "hot dog": 55,
-    "hot dogColor": "hsl(307, 70%, 50%)",
-    burger: 28,
-    burgerColor: "hsl(111, 70%, 50%)",
-    kebab: 58,
-    kebabColor: "hsl(273, 70%, 50%)",
-    donut: 29,
-    donutColor: "hsl(275, 70%, 50%)",
+    quarter: "1/2022",
+    Playstation: 22,
+    Xbox: 30.5,
+    Nitendo: 6.8,
+    PC: 67.0,
+    Accessories: 18
   },
   {
-    country: "AF",
-    "hot dog": 109,
-    "hot dogColor": "hsl(72, 70%, 50%)",
-    burger: 23,
-    burgerColor: "hsl(96, 70%, 50%)",
-    kebab: 34,
-    kebabColor: "#372",
-    donut: 152,
-    donutColor: "hsl(256, 70%, 50%)",
+    quarter: "2/2002",
+    Playstation: 40.3,
+    Xbox: 45,
+    Nitendo: 9.8,
+    PC: 98,
+    Accessories: 33.4
   },
   {
-    country: "AG",
-    "hot dog": 133,
-    "hot dogColor": "hsl(257, 70%, 50%)",
-    burger: 52,
-    burgerColor: "hsl(326, 70%, 50%)",
-    kebab: 43,
-    kebabColor: "hsl(110, 70%, 50%)",
-    donut: 83,
-    donutColor: "hsl(9, 70%, 50%)",
+    quarter: "3/2022",
+    Playstation: 31,
+    Xbox: 22.7,
+    Nitendo: 6.2 ,
+    PC: 56.5,
+    Accessories: 23.6
   },
   {
-    country: "AI",
-    "hot dog": 81,
-    "hot dogColor": "hsl(190, 70%, 50%)",
-    burger: 80,
-    burgerColor: "hsl(325, 70%, 50%)",
-    kebab: 112,
-    kebabColor: "hsl(54, 70%, 50%)",
-    donut: 35,
-    donutColor: "hsl(285, 70%, 50%)",
-  },
-  {
-    country: "AL",
-    "hot dog": 66,
-
-    burger: 111,
-
-    kebab: 167,
-
-    donut: 18,
-
-  },
-  {
-    country: "AM",
-    "hot dog": 80,
-    "hot dogColor": "hsl(87, 70%, 50%)",
-    burger: 47,
-    burgerColor: "hsl(141, 70%, 50%)",
-    kebab: 158,
-    kebabColor: "hsl(224, 70%, 50%)",
-    donut: 49,
-    donutColor: "hsl(274, 70%, 50%)",
+    quarter: "4/2022",
+    Playstation: 56,
+    Xbox: 52.6,
+    Nitendo: 8.8,
+    PC: 78,
+    Accessories: 30.4,
   },
 ];
 

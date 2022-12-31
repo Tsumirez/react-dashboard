@@ -49,8 +49,8 @@ const BarChart = ({ isDashboard = false }) => {
                     }
                 }
             }}
-            keys={["hot dog", "burger", "sandwich", "kebab", "fries", "donut"]}
-            indexBy="country"
+            keys={["Playstation", "Xbox", "Nitendo", "PC","Accessories"]}
+            indexBy="quarter"
             margin={{ top: 50, right: 130, bottom: 50, left: 50 }}
             padding={0.3}
             valueScale={{ type: "linear" }}
@@ -89,7 +89,7 @@ const BarChart = ({ isDashboard = false }) => {
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
-                legend: isDashboard ? undefined : "country", // changed
+                legend: isDashboard ? undefined : "Quarter", // changed
                 legendPosition: "middle",
                 legendOffset: 32,
             }}
@@ -97,7 +97,7 @@ const BarChart = ({ isDashboard = false }) => {
                 tickSize: 5,
                 tickPadding: 5,
                 tickRotation: 0,
-                legend: isDashboard ? undefined : "food", // changed
+                legend: isDashboard ? undefined : "Game Sales", // changed
                 legendPosition: "middle",
                 legendOffset: -40,
             }}
