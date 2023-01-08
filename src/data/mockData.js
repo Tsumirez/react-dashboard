@@ -319,6 +319,14 @@ export const mockTransactions = [
 
 export const mockBarData = [
   {
+    quarter: "3/2021",
+    Playstation: 47.7,
+    Xbox: 44,
+    Nitendo: 7.4,
+    PC: 76.8,
+    Accessories: 24.3
+  },
+  {
     quarter: "4/2021",
     Playstation: 63.7,
     Xbox: 59.8,

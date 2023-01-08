@@ -1,0 +1,25 @@
+.radial-progress-svg {
+  width: var(--circle-width);
+  stroke-dasharray: 314.17;
+  border-radius: 50%;
+  --progress: .9;
+}
+
+.radial-progress-svg div {
+  height: 100%;
+  background: conic-gradient(#d06, #ee3 180deg, #0f9 360deg);
+}
+
+.radial-progress-svg path.progress-bar {
+  stroke-width: 10;
+  stroke: #111;
+  transition: stroke-dashoffset 1s;
+}
+
+.radial-progress-svg path {
+  fill: transparent;
+}
+
+.radial-progress-svg[active="true"] path.progress-bar {
+  stroke-dashoffset: calc(314px * var(--progress));
+}
