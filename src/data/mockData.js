@@ -319,7 +319,7 @@ export const mockTransactions = [
 
 export const mockBarData = [
   {
-    quarter: "3/2021",
+    quarter: "3/21",
     Playstation: 47.7,
     Xbox: 44,
     Nitendo: 7.4,
@@ -327,7 +327,7 @@ export const mockBarData = [
     Accessories: 24.3
   },
   {
-    quarter: "4/2021",
+    quarter: "4/21",
     Playstation: 63.7,
     Xbox: 59.8,
     Nitendo: 11.2,
@@ -335,7 +335,7 @@ export const mockBarData = [
     Accessories: 31.3
   },
   {
-    quarter: "1/2022",
+    quarter: "1/22",
     Playstation: 22,
     Xbox: 30.5,
     Nitendo: 6.8,
@@ -343,7 +343,7 @@ export const mockBarData = [
     Accessories: 18
   },
   {
-    quarter: "2/2002",
+    quarter: "2/22",
     Playstation: 40.3,
     Xbox: 45,
     Nitendo: 9.8,
@@ -351,7 +351,7 @@ export const mockBarData = [
     Accessories: 33.4
   },
   {
-    quarter: "3/2022",
+    quarter: "3/22",
     Playstation: 31,
     Xbox: 22.7,
     Nitendo: 6.2 ,
@@ -359,7 +359,7 @@ export const mockBarData = [
     Accessories: 23.6
   },
   {
-    quarter: "4/2022",
+    quarter: "4/22",
     Playstation: 56,
     Xbox: 52.6,
     Nitendo: 8.8,

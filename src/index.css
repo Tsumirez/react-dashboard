@@ -58,6 +58,18 @@ main.content {
   justify-content:center;
 }
 
+.transactions-panel {
+  grid-column: span 4;
+  grid-row: span 2;
+  overflow-y:auto;
+}
+
+.medium-panel {
+  grid-column: span 4;
+  grid-row: span 2;
+  padding: 1.875rem;
+}
+
 .big-panel {
   grid-column: span 8;
   grid-row: span 2;
@@ -79,4 +91,28 @@ main.content {
 
 div[class$="MuiDataGrid-root"] {
   font-size: 1rem;
+}
+
+@media screen and (max-width: 1600px) {
+  .medium-panel {
+    grid-column: span 6;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .small-panel {
+    grid-column: span 6;
+  }
+
+  .transactions-panel {
+    grid-column: span 6;
+  }
+
+  .medium-panel {
+    grid-column: span 6;
+  }
+
+  .grow {
+    grid-column: span 12;
+  }
 }

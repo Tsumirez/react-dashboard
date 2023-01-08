@@ -111,7 +111,7 @@ const Dashboard = () => {
 
         {/* ROW 2 */}
 
-        <Box className="big-panel"
+        <Box className="big-panel grow"
            backgroundColor={colors.primary[400]}
         >
           <Box
@@ -144,10 +144,9 @@ const Dashboard = () => {
         {/* TRANSACTIONS */}
 
         <Box
-          gridColumn="span 4"
-          gridRow="span 2"
           backgroundColor={colors.primary[400]}
-          overflow="auto">
+          className="transactions-panel"
+          >
           <Box
             display="flex"
             justifyContent="space-between"
@@ -191,10 +190,8 @@ const Dashboard = () => {
         {/* ROW 3 */}
 
         <Box
-          gridColumn="span 4"
-          gridRow="span 2"
+          className="medium-panel"
           backgroundColor={colors.primary[400]}
-          p="30px"
         >
           <Typography variant="h5" fontWeight="600">Campaign</Typography>
           <Box display="flex" flexDirection="column" alignItems="center" mt="25px">
@@ -209,8 +206,7 @@ const Dashboard = () => {
         </Box>
 
         <Box
-          gridColumn="span 4"
-          gridRow="span 2"
+          className="medium-panel grow"
           backgroundColor={colors.primary[400]}
         >
           <Typography variant="h5" fontWeight="600" sx={{ p: "30px 30px 0 30px" }}>Sales Quantity</Typography>
@@ -220,10 +216,9 @@ const Dashboard = () => {
         </Box>
 
         <Box
-          gridColumn="span 4"
-          gridRow="span 2"
+          className="medium-panel grow"
           backgroundColor={colors.primary[400]}
-          p="30px"
+
         >
           <Typography variant="h5" fontWeight="600" sx={{ mb: "15px" }}>Geography Based Traffic</Typography>
           <Box height="200px">
