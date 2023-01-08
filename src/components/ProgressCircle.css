@@ -11,9 +11,9 @@
 }
 
 .radial-progress-svg path.progress-bar {
-  stroke-width: 10;
+  stroke-width: 20;
   stroke: #111;
-  transition: stroke-dashoffset 1s;
+  transition: stroke-dashoffset 1s ease-in .5s;
 }
 
 .radial-progress-svg path {

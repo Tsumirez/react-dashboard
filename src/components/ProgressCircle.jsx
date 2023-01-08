@@ -18,7 +18,7 @@ const ProgressCircle = ({ progress = "0.55", size = "40" }) => {
             <defs>
                 <clipPath id="ring" clipPathUnits="objectBoundingBox">
                     <path clip-rule="evenodd"
-                        d="M 0.5 .05 a 0.45 0.45 0 0 1 0 0.9 a 0.4 0.4 0 0 1 0 -0.9 M 0.5 0 a 0.5 0.5 0 0 1 0 1 a 0.5 0.5 0 0 1 0 -1" />
+                        d="M 0.5 .1 a 0.4 0.4 0 0 1 0 0.8 a 0.4 0.4 0 0 1 0 -0.8 M 0.5 0 a 0.5 0.5 0 0 1 0 1 a 0.5 0.5 0 0 1 0 -1" />
                 </clipPath>
             </defs>
 
@@ -26,8 +26,8 @@ const ProgressCircle = ({ progress = "0.55", size = "40" }) => {
                 <div></div>
             </foreignObject>
             <path d="M 50 0 a 50 50 0 0 0 0 100 a 50 50 0 0 0 0 -100" class="progress-bar"></path>
-            <path d="M 50 5 a 45 45 0 0 0 0 90 a 45 45 0 0 0 0 -90" stroke-width="1" stroke="black"></path>
-            <path d="M 50 0 a 50 50 0 0 0 0 100 a 50 50 0 0 0 0 -100" stroke-width="2" stroke="black"></path>
+            <path d="M 50 10 a 40 40 0 0 0 0 80 a 40 40 0 0 0 0 -80" stroke-width="2" stroke="black"></path>
+            <path d="M 50 0 a 50 50 0 0 0 0 100 a 50 50 0 0 0 0 -100" stroke-width="4" stroke="black"></path>
         </svg>
     )
 }

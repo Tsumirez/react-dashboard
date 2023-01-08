@@ -66,7 +66,7 @@ const Dashboard = () => {
             progress="0.75"
             increase="+14%"
             icon={
-              <EmailIcon sx={{ color: colors.greenAccent[600], fontSize: "26px" }} />
+             <EmailIcon sx={{ color: colors.greenAccent[600], fontSize: "26px" }} />
             }
           />
         </Panel>
@@ -111,7 +111,7 @@ const Dashboard = () => {
 
         {/* ROW 2 */}
 
-        <Box class="big-panel"
+        <Box className="big-panel"
            backgroundColor={colors.primary[400]}
         >
           <Box

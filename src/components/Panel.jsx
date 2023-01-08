@@ -24,12 +24,7 @@ const Panel = ({ rowspan=1, children }) => {
 
     return (
         <Box className="small-panel"
-            // gridColumn={`span ${colspan}`}
-            // gridRow={`span ${rowspan}`}
              backgroundColor={colors.primary[400]}
-            // display="flex"
-            // alignItems="center"
-            // justifyContent="center"
         >{children}</Box>
     )
 }
