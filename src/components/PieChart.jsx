@@ -48,7 +48,7 @@ const PieChart = () => {
                     },
                     legends: {
                         text: {
-                            fontSize: "1rem"
+                            fontSize: "calc(.5rem + .5vw)"
                         }
                     }
                 }}
@@ -97,12 +97,12 @@ const PieChart = () => {
                 ]}
                 legends={[
                     {
-                        anchor: "bottom",
+                        anchor: "bottom-right",
                         direction: "row",
                         justify: false,
-                        translateX: 0,
-                        translateY: 80,
-                        itemsSpacing: 50,
+                        translateX: 100,
+                        translateY: 0,
+                        itemsSpacing: 10,
                         itemWidth: 100,
                         itemHeight: 18,
                         itemTextColor: colors.gray[100],
