@@ -132,7 +132,7 @@ const SideBar = () => {
 
             <Item
               title="Manage Team"
-              to="./team"
+              to="/team"
               icon={<PeopleOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -140,7 +140,7 @@ const SideBar = () => {
 
             <Item
               title="Contacts Information"
-              to="./contacts"
+              to="/contacts"
               icon={<ContactsOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -148,7 +148,7 @@ const SideBar = () => {
 
             <Item
               title="Invoice Balances"
-              to="./invoices"
+              to="/invoices"
               icon={<ReceiptOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -160,7 +160,7 @@ const SideBar = () => {
 
             <Item
               title="Profile Form"
-              to="./form"
+              to="/form"
               icon={<PersonOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -168,7 +168,7 @@ const SideBar = () => {
 
             <Item
               title="Calendar"
-              to="./calendar"
+              to="/calendar"
               icon={<CalendarTodayOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -176,7 +176,7 @@ const SideBar = () => {
 
             <Item
               title="FAQ Page"
-              to="./faq"
+              to="/faq"
               icon={<HelpOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -188,7 +188,7 @@ const SideBar = () => {
 
             <Item
               title="Bar Chart"
-              to="./bar"
+              to="/bar"
               icon={<BarChartOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -196,7 +196,7 @@ const SideBar = () => {
 
             <Item
               title="Pie Chart"
-              to="./pie"
+              to="/pie"
               icon={<PieChartOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -204,7 +204,7 @@ const SideBar = () => {
 
             <Item
               title="Line Chart"
-              to="./line"
+              to="/line"
               icon={<TimelineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
@@ -212,7 +212,7 @@ const SideBar = () => {
 
 <Item
               title="Geography Chart"
-              to="./geography"
+              to="/geography"
               icon={<MapOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}

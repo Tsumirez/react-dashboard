@@ -82,13 +82,12 @@ main.content {
 
 .pie-chart {
   /* height: 100%;   */
-  width: 80%;
+  width: 50%;
   margin-left: 10%;
   aspect-ratio: 1/1;
 }
 
 .bar-chart svg, .pie-chart svg {
-  width: 100%;
   min-width: 240px;
 }
 
