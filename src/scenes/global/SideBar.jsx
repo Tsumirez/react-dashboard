@@ -96,7 +96,7 @@ const SideBar = () => {
                 <img
                   width="100px"
                   height="100px"
-                  src={`../../assets/user.jpg`}
+                  src={`${process.env.PUBLIC_URL}/assets/user.jpg`}
                   alt="profile-user"
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
