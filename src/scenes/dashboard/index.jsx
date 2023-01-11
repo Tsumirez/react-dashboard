@@ -19,7 +19,7 @@ const Dashboard = () => {
   const colors = tokens(theme.palette.mode);
 
   return (
-    <Box m="20px">
+    <>
       <Box display='flex' justifyContent='space-between' alignItems='center' className="dashboard-header">
         <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
 
@@ -209,7 +209,7 @@ const Dashboard = () => {
           className="medium-panel grow"
           backgroundColor={colors.primary[400]}
         >
-          <Typography variant="h5" fontWeight="600" sx={{ p: "30px 30px 0 30px" }}>Sales Quantity</Typography>
+          <Typography variant="h5" fontWeight="600">Sales Quantity</Typography>
           <Box height="250px" mt="-20px">
             <BarChart isDashboard={true} />
           </Box>
@@ -226,7 +226,7 @@ const Dashboard = () => {
           </Box>
         </Box>
       </Box>
-    </Box>
+    </>
   )
 }
 

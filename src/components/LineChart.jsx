@@ -6,6 +6,10 @@ import { useTheme } from "@mui/material";
 const LineChart = ({ isDashboard = false }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
+    let bodyElement = document.querySelector("body");
+    let bodyStyles = window.getComputedStyle(bodyElement);
+    let lineChartMarginLeft = parseInt((bodyStyles.getPropertyValue("--line-chart-margin-left")));
+    let lineChartMarginRight = parseInt((bodyStyles.getPropertyValue("--line-chart-margin-right")));
 
     return (
         <ResponsiveLine
@@ -44,7 +48,7 @@ const LineChart = ({ isDashboard = false }) => {
                 },
             }}
             colors={isDashboard ? { datum: "color" } : { scheme: "set1" }} // added
-            margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+            margin={{ top: 50, right: lineChartMarginRight, bottom: 50, left: lineChartMarginLeft }}
             xScale={{ type: "point" }}
             yScale={{
                 type: "linear",

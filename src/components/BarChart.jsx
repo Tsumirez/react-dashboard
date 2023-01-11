@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useTheme } from "@mui/material";
 import { ResponsiveBar } from "@nivo/bar";
 import { tokens } from "../theme";
@@ -6,6 +7,15 @@ import { mockBarData as data } from "../data/mockData";
 const BarChart = ({ isDashboard = false }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
+    let bodyElement = document.querySelector("body");
+    let bodyStyles = window.getComputedStyle(bodyElement);
+    let barChartMarginLeft = parseInt((bodyStyles.getPropertyValue("--bar-chart-margin-left")));
+    let barChartMarginRight = parseInt((bodyStyles.getPropertyValue("--bar-chart-margin-right")));
+    console.log(barChartMarginLeft);
+
+    useEffect(() => {
+        console.log("change");
+    });
 
     return (
         <div class="bar-chart">
@@ -51,7 +61,7 @@ const BarChart = ({ isDashboard = false }) => {
                 }}
                 keys={["Playstation", "Xbox", "Nitendo", "PC", "Accessories"]}
                 indexBy="quarter"
-                margin={{ top: 50, right: 0, bottom: 50, left: 50 }}
+                margin={{ top: 50, right: barChartMarginRight, bottom: 50, left: barChartMarginLeft }}
                 padding={0.3}
                 valueScale={{ type: "linear" }}
                 indexScale={{ type: "band", round: true }}
