@@ -381,12 +381,12 @@ export const mockPieData = [
   },
   {
     id: "RPG",
-    label: "Role-Playing",
+    label: "RPG",
     value: 222
   },
   {
     id: "Platforming",
-    label: "Platfromers",
+    label: "Platform",
     value: 203,
   },
   {

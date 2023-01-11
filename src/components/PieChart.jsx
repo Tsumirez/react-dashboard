@@ -6,6 +6,11 @@ import { mockPieData as data } from "../data/mockData";
 const PieChart = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
+    let bodyElement = document.querySelector("body");
+    let bodyStyles = window.getComputedStyle(bodyElement);
+    let pieChartLegendOrientation = bodyStyles.getPropertyValue("--pie-chart-legend-orientation")
+    let pieChartMarginBottom = parseInt(bodyStyles.getPropertyValue("--pie-chart-margin-bottom"))
+    console.log(pieChartLegendOrientation)
 
     return (
         <div class="pie-chart">
@@ -52,7 +57,7 @@ const PieChart = () => {
                         }
                     }
                 }}
-                margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
+                margin={{ top: 0, right: 0, bottom: pieChartMarginBottom, left: 0 }}
                 innerRadius={0.9}
                 padAngle={2}
                 cornerRadius={3}
@@ -63,6 +68,7 @@ const PieChart = () => {
                 // }}
                 borderColor="black"
                 borderWidth="1.5"
+                enableArcLinkLabels={false}
                 arcLinkLabelsSkipAngle={10}
                 arcLinkLabelsTextColor={colors.gray[100]}
                 arcLinkLabelsThickness={2}
@@ -97,11 +103,11 @@ const PieChart = () => {
                 ]}
                 legends={[
                     {
-                        anchor: "bottom-right",
-                        direction: "row",
+                        anchor: "bottom",
+                        direction: pieChartLegendOrientation,
                         justify: false,
-                        translateX: 100,
-                        translateY: 0,
+                        translateX: 0,
+                        translateY: pieChartMarginBottom,
                         itemsSpacing: 10,
                         itemWidth: 100,
                         itemHeight: 18,

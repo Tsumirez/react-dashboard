@@ -7,10 +7,13 @@
   box-sizing: border-box;
 }
 
-html, body, #root, .app {
+html,
+body,
+#root,
+.app {
   height: 100%;
   width: 100%;
-  font-family: "Source Sans Pro",sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 body {
@@ -18,6 +21,7 @@ body {
   --bar-chart-margin-right: 120;
   --line-chart-margin-left: 60;
   --line-chart-margin-right: 110;
+  --pie-chart-labels: true;
 }
 
 .app {
@@ -67,15 +71,15 @@ main.content {
 .small-panel {
   grid-column: span 3;
   padding: 1.875rem;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .transactions-panel {
   grid-column: span 4;
   grid-row: span 2;
-  overflow-y:auto;
+  overflow-y: auto;
 }
 
 .medium-panel {
@@ -90,26 +94,70 @@ main.content {
 }
 
 .bar-chart {
-  height:100%;
+  height: 100%;
   shape-rendering: crispedges;
 }
 
-.pie-chart {
-  margin-left: 10%;
-  aspect-ratio: 1/1;
+.world-map {
+  height: 100%;
 }
 
-.bar-chart svg, .pie-chart svg {
+.world-map svg {
+  width: 100%;
+}
+
+.bar-chart svg {
   width: 100%;
 }
 
 /* Nivo Pie Chart arc labels font-size hack */
-.pie-chart svg > g >g > g:not([style]) text {
-  font-size: calc(.5rem + .5vw)  !important;
+.pie-chart svg>g>g>g:not([style]) text {
+  font-size: calc(.5rem + .5vw) !important;
 }
 
 div[class$="MuiDataGrid-root"] {
   font-size: 1rem;
+}
+
+@media (orientation: portrait) {
+  body {
+    --pie-chart-legend-orientation: column;
+    --pie-chart-margin-bottom: 0;
+  }
+
+  .pie-chart {
+    aspect-ratio: 1/2;
+  }
+
+  .pie-chart svg {
+    width: 100%;
+  }
+
+  .pie-chart svg>g {
+    transform: translateY(-25%);
+  }
+
+  .pie-chart svg>g>g:nth-of-type(2) {
+    transform: translate(45%, 85%);
+  }
+}
+
+@media (orientation: landscape) {
+  body {
+    --pie-chart-legend-orientation: row;
+    --pie-chart-margin-bottom: 50;
+
+  }
+
+  .pie-chart {
+    /* aspect-ratio: 2/1; */
+  }
+
+  .pie-chart,
+  .pie-chart svg {
+    height: 90%;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1600px) {
@@ -162,7 +210,8 @@ div[class$="MuiDataGrid-root"] {
     padding: .5rem;
   }
 
-  .transactions-panel, .medium-panel {
+  .transactions-panel,
+  .medium-panel {
     grid-column: span 12;
     padding: .5rem;
   }
