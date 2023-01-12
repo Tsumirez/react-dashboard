@@ -2,22 +2,36 @@ import { ResponsivePie } from "@nivo/pie";
 import { tokens } from "../theme";
 import { useTheme } from "@mui/material";
 import { mockPieData as data } from "../data/mockData";
+import { useEffect, useState } from "react";
 
 const PieChart = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
+
+    // observer for on resize event to change pie chart legend layout based on page orientation
     let bodyElement = document.querySelector("body");
     let bodyStyles = window.getComputedStyle(bodyElement);
     let pieChartLegendOrientation = bodyStyles.getPropertyValue("--pie-chart-legend-orientation")
     let pieChartMarginBottom = parseInt(bodyStyles.getPropertyValue("--pie-chart-margin-bottom"))
-    console.log(pieChartLegendOrientation)
+    let [orientation, setOrientation] = useState("landscape");
+    let [mobileVersion, setMobileVersion] = useState(false);
+
+    useEffect(() => {
+        function handleResize(e) {
+            let breakpoint = 586;
+            setMobileVersion(breakpoint>window.innerWidth)
+            let currentOrientation = window.innerWidth > window.innerHeight ? "landscape" : "portrait";
+            setOrientation(currentOrientation);
+        }
+
+        window.addEventListener("resize", handleResize);
+    });
+
 
     return (
         <div class="pie-chart">
             <ResponsivePie
                 data={data}
-                // ['#002d6e','#40a','#71b', '#a29', '#c07']
-                //['#390','#fd3','#333', '#46a', '#c05']
                 colors={['#390', '#fd3', '#333', '#46a', '#c05', 'rgba(60,10,90,0.7)']}
                 theme={{
                     axis: {

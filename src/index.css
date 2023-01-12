@@ -207,7 +207,6 @@ div[class$="MuiDataGrid-root"] {
 
   .small-panel {
     grid-column: span 12;
-    padding: .5rem;
   }
 
   .transactions-panel,
