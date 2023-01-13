@@ -3,29 +3,23 @@ import { tokens } from "../theme";
 import { useTheme } from "@mui/material";
 import { mockPieData as data } from "../data/mockData";
 import { useEffect, useState } from "react";
+import ResizeObserver from "./ResizeObserver";
 
 const PieChart = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
+    console.log('am being rendered')
 
-    // observer for on resize event to change pie chart legend layout based on page orientation
+
+    // css handles proper display of things based on screen orientation and size
+    // this script just draws the css variables and converts them to js, so chart component can use them
+
     let bodyElement = document.querySelector("body");
     let bodyStyles = window.getComputedStyle(bodyElement);
     let pieChartLegendOrientation = bodyStyles.getPropertyValue("--pie-chart-legend-orientation")
     let pieChartMarginBottom = parseInt(bodyStyles.getPropertyValue("--pie-chart-margin-bottom"))
-    let [orientation, setOrientation] = useState("landscape");
-    let [mobileVersion, setMobileVersion] = useState(false);
+    // observer for resize event to force component re-render when orientation changes or mobile breakpoint is crossed
 
-    useEffect(() => {
-        function handleResize(e) {
-            let breakpoint = 586;
-            setMobileVersion(breakpoint>window.innerWidth)
-            let currentOrientation = window.innerWidth > window.innerHeight ? "landscape" : "portrait";
-            setOrientation(currentOrientation);
-        }
-
-        window.addEventListener("resize", handleResize);
-    });
 
 
     return (
