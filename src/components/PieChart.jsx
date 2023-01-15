@@ -23,7 +23,7 @@ const PieChart = () => {
 
 
     return (
-        <div class="pie-chart">
+        <div className="pie-chart">
             <ResponsivePie
                 data={data}
                 colors={['#390', '#fd3', '#333', '#46a', '#c05', 'rgba(60,10,90,0.7)']}

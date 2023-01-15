@@ -8,7 +8,7 @@ const Pie = () => {
         <>
             <Header title="Pie chart" subtitle="Simple pie chart" />
             <Box height="75vh">
-                <ResizeObserver>
+                <ResizeObserver breakpoints={[586, 1200,1600]}>
                     {() => <PieChart />}
                 </ResizeObserver>
             </Box>
